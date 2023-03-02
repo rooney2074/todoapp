@@ -1,0 +1,27 @@
+
+<div class="vessel">
+    <article class="wrapper">
+        <div class="container"   style="margin-bottom: 220px;">
+            <div class="row">
+                <div class="col-lg-3 col-md-2 col-sm-1"></div>
+                <div class="col-lg-6 p-5 col-md-8 col-sm-10 mb-5" id="form">
+                    <div class="mb-3">
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_569204.png" width="20%" alt="">
+                        <h1 class="mt-4">Welocme: <b>{{user}}</b></h1>
+                    </div>
+                    <form action="" class="d-flex">
+                        <input class="form-control" [(ngModel)]="task" name="task" type="text" placeholder="Enter Task here">&nbsp;
+                        <a (click)="add()" class="btn">Add</a>
+                    </form>
+                    <p *ngIf="tasks.length!==0" class="mt-3">Your Tasks: </p>
+                    <div *ngFor="let i of tasks">
+                        <h5>{{i}}</h5>
+                        <a class="btn btn-danger mb-3" (click)="remove(i)">delete</a>
+                    </div>
+                    <p *ngIf="tasks.length==0" class="mt-3">No Tasks Entered</p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-1"></div>
+            </div>
+        </div>
+    </article>
+</div>

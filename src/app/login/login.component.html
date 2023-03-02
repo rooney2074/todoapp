@@ -1,0 +1,26 @@
+<div class="vessel">
+    <article class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-2 col-sm-3"></div>
+                <div class="col-lg-4 col-md-8 col-sm-6" id="form">
+                    <form [formGroup]="loginForm" action="">
+                        <h2 class="text-center mt-3">Log <b style="font-size: 80px;">In.</b></h2><br>
+                        <label for="">Username</label>
+                        <input formControlName="uname" name="uname" type="text" class="form-control">
+                        <div *ngIf="this.loginForm.get('uname')?.errors && this.loginForm.touched" style="color:rgb(0, 0, 0);"><p style="font-size: 17px;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M12 22c4.879 0 9-4.121 9-9s-4.121-9-9-9-9 4.121-9 9 4.121 9 9 9zm0-16c3.794 0 7 3.206 7 7s-3.206 7-7 7-7-3.206-7-7 3.206-7 7-7zm5.284-2.293 1.412-1.416 3.01 3-1.413 1.417zM5.282 2.294 6.7 3.706l-2.99 3-1.417-1.413z"></path><path d="M11 9h2v5h-2zm0 6h2v2h-2z"></path></svg>&nbsp;Please Enter In Alphabets</p></div><br>
+    
+                        <label for="">Password</label>
+                        <input formControlName="pswd" name="pswd" type="password" class="form-control">
+                        <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.touched" style="color:rgb(0, 0, 0);"><p style="font-size: 17px;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M12 22c4.879 0 9-4.121 9-9s-4.121-9-9-9-9 4.121-9 9 4.121 9 9 9zm0-16c3.794 0 7 3.206 7 7s-3.206 7-7 7-7-3.206-7-7 3.206-7 7-7zm5.284-2.293 1.412-1.416 3.01 3-1.413 1.417zM5.282 2.294 6.7 3.706l-2.99 3-1.417-1.413z"></path><path d="M11 9h2v5h-2zm0 6h2v2h-2z"></path></svg>&nbsp;Please Enter In Numbers</p></div>
+    
+                        <a class="btn mt-3 mb-4" (click)="login()">login</a>&nbsp;
+                        <a routerLink="/register" style="text-decoration: none; color: black;">Sign Up</a>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-2 col-sm-3"></div>
+            </div>
+        </div>
+    </article>
+    
+</div>
